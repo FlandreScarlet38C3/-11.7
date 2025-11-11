@@ -15,6 +15,7 @@ namespace 测试系统_10._31
         private Button CurrentBtn;
         private Panel LeftBorderBtn;
         private Form CurrentChildForm;
+
         public FormTest()
         {
             InitializeComponent();

@@ -9,6 +9,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
+
 
 namespace 测试系统_10._31
 {
@@ -29,18 +31,21 @@ namespace 测试系统_10._31
             webBrowser1.DocumentText = "<h1>欢迎</h1><p>请选择左侧的按钮以查看内容。</p>";
         }
 
+
+
+        //设置彩色边框
         private void SetColourfulPanel()
         {
             LeftBorderBtn = new Panel();
             LeftBorderBtn.Size = new Size(7, 74);
         }
-
+        //获取初始窗体大小
         public void GetInitialScreenSize()
         {
             x = this.Width;
             y = this.Height;
         }
-
+        //定义颜色
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -50,6 +55,7 @@ namespace 测试系统_10._31
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        //激活按钮
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -69,6 +75,7 @@ namespace 测试系统_10._31
                 LeftBorderBtn.BringToFront();
             }
         }
+        //禁用按钮
         private void DisableButton()
         {
             if (CurrentBtn != null)
@@ -80,7 +87,7 @@ namespace 测试系统_10._31
                 CurrentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             }
         }
-
+        //打开子窗体
         private void OpenChildForm(Form childForm)
         {
 

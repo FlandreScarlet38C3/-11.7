@@ -36,7 +36,6 @@
             this.buttonToTest = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonToHome = new System.Windows.Forms.Button();
-            this.panelForTitle = new System.Windows.Forms.Panel();
             this.panelForChildForm = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panelForMenu.SuspendLayout();
@@ -140,15 +139,6 @@
             this.buttonToHome.UseVisualStyleBackColor = true;
             this.buttonToHome.Click += new System.EventHandler(this.buttonToHome_Click);
             // 
-            // panelForTitle
-            // 
-            this.panelForTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelForTitle.Location = new System.Drawing.Point(104, 0);
-            this.panelForTitle.Name = "panelForTitle";
-            this.panelForTitle.Size = new System.Drawing.Size(696, 100);
-            this.panelForTitle.TabIndex = 1;
-            this.panelForTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForTitle_MouseDown_1);
-            // 
             // panelForChildForm
             // 
             this.panelForChildForm.AutoSize = true;
@@ -156,11 +146,10 @@
             this.panelForChildForm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelForChildForm.Controls.Add(this.webBrowser1);
             this.panelForChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForChildForm.Location = new System.Drawing.Point(104, 100);
+            this.panelForChildForm.Location = new System.Drawing.Point(104, 0);
             this.panelForChildForm.Name = "panelForChildForm";
-            this.panelForChildForm.Size = new System.Drawing.Size(696, 477);
+            this.panelForChildForm.Size = new System.Drawing.Size(696, 577);
             this.panelForChildForm.TabIndex = 2;
-          
             // 
             // webBrowser1
             // 
@@ -168,7 +157,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(692, 473);
+            this.webBrowser1.Size = new System.Drawing.Size(692, 573);
             this.webBrowser1.TabIndex = 0;
             // 
             // MainMenu
@@ -177,15 +166,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 577);
             this.Controls.Add(this.panelForChildForm);
-            this.Controls.Add(this.panelForTitle);
             this.Controls.Add(this.panelForMenu);
             this.MinimumSize = new System.Drawing.Size(816, 616);
             this.Name = "MainMenu";
             this.Text = "主界面";
             this.ResizeBegin += new System.EventHandler(this.MainMenu_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.MainMenu_ResizeEnd);
-          
-           
             this.panelForMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelForChildForm.ResumeLayout(false);
@@ -204,7 +190,6 @@
         private System.Windows.Forms.Button buttonToTest;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonToHome;
-        private System.Windows.Forms.Panel panelForTitle;
         private System.Windows.Forms.Panel panelForChildForm;
         private System.Windows.Forms.WebBrowser webBrowser1;
     }
