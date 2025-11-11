@@ -312,7 +312,7 @@ namespace 测试系统_10._31
         /// <summary>
         /// 错误事件处理
         /// </summary>
-        private void OnErrorOccurred(object sender, Exception ex)
+        private void OnErrorOccurred(object? sender, Exception ex)
         {
             this.Invoke((MethodInvoker)delegate
             {
