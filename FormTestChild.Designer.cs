@@ -137,6 +137,7 @@
             this.PanelForReceive.RowCount = 2;
             this.PanelForReceive.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.24731F));
             this.PanelForReceive.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.75269F));
+            this.PanelForReceive.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.PanelForReceive.Size = new System.Drawing.Size(326, 279);
             this.PanelForReceive.TabIndex = 1;
             // 
