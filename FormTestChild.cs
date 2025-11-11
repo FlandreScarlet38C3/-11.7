@@ -23,13 +23,15 @@ namespace 测试系统_10._31
         {
             // 获取单例实例
             serialPortManager = SerialPortManager.Instance;
-
-            // 订阅事件
-            if (serialPortManager != null)
+            while (this.IsHandleCreated == true)
             {
-                serialPortManager.DataReceived += OnDataReceived;
-                serialPortManager.StatusChanged += OnStatusChanged;
-                serialPortManager.ErrorOccurred += OnErrorOccurred;
+                // 订阅事件
+                if (serialPortManager != null)
+                {
+                    serialPortManager.DataReceived += OnDataReceived;
+                    serialPortManager.StatusChanged += OnStatusChanged;
+                    serialPortManager.ErrorOccurred += OnErrorOccurred;
+                }
             }
         }
 
@@ -44,6 +46,7 @@ namespace 测试系统_10._31
             ComboBoxForStopBit.SelectedItem = "1";
             ComboBoxForCheck.SelectedItem = "None";
             ComboBoxForControl.SelectedItem = "None";
+            
 
             // 更新连接状态
             UpdateConnectionStatus();
@@ -312,7 +315,7 @@ namespace 测试系统_10._31
         /// <summary>
         /// 错误事件处理
         /// </summary>
-        private void OnErrorOccurred(object? sender, Exception ex)
+        private void OnErrorOccurred(object sender, Exception ex)
         {
             this.Invoke((MethodInvoker)delegate
             {
@@ -423,7 +426,10 @@ namespace 测试系统_10._31
 
         private void FormTestChild_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (serialPortManager != null)
+            {
+                serialPortManager.ClosePort();
+            }
         }
 
       

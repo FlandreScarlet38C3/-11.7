@@ -106,6 +106,7 @@ namespace 测试系统_10._31
             panelForChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            
         }
 
 

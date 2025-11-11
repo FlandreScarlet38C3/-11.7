@@ -43,7 +43,9 @@ namespace 测试系统_10._31
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTestChild());
+            FormTestChild formTestChild = new FormTestChild();
+            OpenChildForm(formTestChild);
+            
         }
     }
 }
